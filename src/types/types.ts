@@ -8,7 +8,7 @@ export type Question = {
   answers: Answer[],
 };
 
-export type PersonalityTest = {
+export type PersonalityQuestions = {
   questions: Question[],
 };
 
@@ -24,7 +24,13 @@ export type Personality = {
   type: PersonalityType,
 };
 
+export type PersonalityTypeIndex = 1 | 2 | 3 | 4;
+
+export type PersonalityTypes = {
+  [id in PersonalityTypeIndex]: Personality;
+};
+
 export type DBData = {
-  personalityTest: PersonalityTest,
-  personalities: {[id: number]: Personality},
+  personalityQuestions: PersonalityQuestions,
+  personalityTypes: PersonalityTypes,
 };

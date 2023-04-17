@@ -1,15 +1,32 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { db } from "./db/db";
+import PersonalityQuizz from "./features/PersonalityQuizz/PersonalityQuizz";
 
 function App() {
-  useEffect(() => {
-    db.adapter.read().then((data) => {
-      console.log(data);
-    });
-  }, []);
+  const [startTest, setStartTest] = useState(false);
 
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  const onStartTest = () => {
+    setStartTest(true);
+  };
+
+  const onStopTest = () => {
+    setStartTest(false);
+  };
+
+  return (
+    <main className="flex justify-center items-center h-screen">
+      {startTest ? (
+        <PersonalityQuizz />
+      ) : (
+        <button
+          onClick={onStartTest}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded h-12 w-32"
+        >
+          Start test
+        </button>
+      )}
+    </main>
+  );
 }
 
 export default App;

@@ -1,11 +1,11 @@
-import { Personality, PersonalityType, PersonalityTest } from "../types/types";
+import { Personality, PersonalityType, PersonalityQuestions, PersonalityTypes } from "../types/types";
 
 const stronglyIntrovert = 'People who are strongly introverted may prefer spending time alone or in small groups, and may find socializing to be draining. They tend to be introspective and thoughtful, and may enjoy deep conversations over small talk. They may also be very independent and self-sufficient, preferring to rely on themselves rather than others. They may need plenty of alone time to recharge their batteries, and may be sensitive to external stimulation such as noise or bright lights';
 const moderatelyIntrovert = 'People who are moderately introverted enjoy spending time alone, but may also enjoy socializing in small groups. They tend to be thoughtful and reflective, and may prefer a few close friends over a large social circle. They may be reserved or quiet in new situations, but may become more outgoing as they get to know people. They may also be creative and introspective, enjoying hobbies such as reading, writing, or art';
 const moderatelyExtrovert = 'People who are moderately extraverted enjoy socializing and meeting new people, but may also value alone time. They tend to be outgoing and friendly, and may have a large social circle. They may be comfortable in a variety of social situations, from small gatherings to large parties. They may also be assertive and confident, and may enjoy taking on leadership roles or being in charge of a project';
 const stronglyExtrovert = 'They tend to be outgoing, enthusiastic, and confident, and may have a large social circle. They may enjoy a variety of activities and experiences, and may be comfortable in a range of social situations. They may also be very expressive and enjoy being in the spotlight. They may be energized by external stimulation such as music, noise, or bright lights, and may enjoy taking risks and trying new things';
 
-export const personalityData: {[id: number]: Personality} = {
+export const personalityTypesData: PersonalityTypes = {
   1: {
     description: stronglyIntrovert,
     type: PersonalityType.Introvert
@@ -24,7 +24,7 @@ export const personalityData: {[id: number]: Personality} = {
   },
 };
 
-export const personalityTestData: PersonalityTest = {
+export const personalityQuestionsData: PersonalityQuestions = {
   questions: [
     {
       question: "How do you typically feel in large social gatherings?",
