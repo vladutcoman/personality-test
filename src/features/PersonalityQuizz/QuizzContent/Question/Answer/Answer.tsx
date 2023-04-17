@@ -1,22 +1,22 @@
-import { Answer } from "../../../../types/types";
+import { Answer } from "../../../../../types/types";
 
 type AnswerProps = {
   answerContent: Answer;
   selected: boolean;
-  onSelect: () => void;
+  onChange: () => void;
 };
 
 const AnswerOption: React.FC<AnswerProps> = ({
   answerContent,
   selected,
-  onSelect,
+  onChange,
 }) => {
   return (
     <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
       <div className="flex items-center pl-3">
         <input
           checked={selected}
-          onChange={onSelect}
+          onChange={onChange}
           id={`li-answer-${answerContent.score}`}
           type="radio"
           value=""

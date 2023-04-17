@@ -1,33 +1,26 @@
 import { useState } from "react";
-import Question from "../Question/Question";
-import Result from "../Result/Result";
+import Question from "./Question/Question";
+import Result from "./Result/Result";
 
 type QuizzContentProps = {
   totalQuestions: number;
 };
 
 const QuizzContent: React.FC<QuizzContentProps> = ({ totalQuestions }) => {
-  const [step, setStep] = useState(0);
-  const [score, setScore] = useState(0);
+  const [showQuestions, setShowQuestions] = useState(true);
+  const [finalScore, setFinalScore] = useState(0);
 
-  const onNextStep = () => {
-    setStep((prevStep) => prevStep + 1);
-  };
-
-  const addScore = (scoreToAdd: number) => {
-    setScore((prevScore) => prevScore + scoreToAdd);
+  const submitFinalQuestion = (scoreToAdd: number) => {
+    setShowQuestions(false);
+    setFinalScore(scoreToAdd);
   };
 
   return (
     <section>
-      {step < totalQuestions ? (
-        <Question
-          proceedNextStep={onNextStep}
-          addScore={addScore}
-          index={step}
-        />
+      {showQuestions ? (
+        <Question submitFinalQuestion={submitFinalQuestion} />
       ) : (
-        <Result score={score} />
+        <Result score={finalScore} />
       )}
     </section>
   );

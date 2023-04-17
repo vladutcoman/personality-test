@@ -3,7 +3,7 @@ import withErrorCheck from "../../hoc/withErrorCheck";
 import usePersonalityQuestions from "../../hooks/usePersonalityQuestions";
 import QuizzContent from "./QuizzContent/QuizzContent";
 
-const PersonalityQuizz = () => {
+const PersonalityQuizz: React.FC = () => {
   const { personalityQuestions, error } = usePersonalityQuestions();
 
   return (

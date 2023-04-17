@@ -1,4 +1,4 @@
-import usePersonalityTypes from "../../../hooks/usePersonalityTypes";
+import usePersonalityTypes from "../../../../hooks/usePersonalityTypes";
 
 type ResultProps = {
   score: number;
@@ -6,11 +6,10 @@ type ResultProps = {
 
 const Result: React.FC<ResultProps> = ({ score }) => {
   const { personalityTypes, error } = usePersonalityTypes();
-  console.log({ score, personalityTypes });
 
   return (
     <div>
-      <h1>Result</h1>
+      <h1>{score}</h1>
     </div>
   );
 };
