@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-type QuizzLinkProps = {
+export type QuizzLinkProps = {
   text: string;
   route: string;
 };

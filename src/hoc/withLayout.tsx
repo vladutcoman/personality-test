@@ -10,7 +10,7 @@ export function withLayout<P>(WrappedComponent: React.ComponentType<P>) {
     return (
       <section className="flex flex-col gap-4 justify-center items-center h-screen">
         <QuizzLink route="/" text="Back to Start" />
-        <WrappedComponent {...props} />;
+        <WrappedComponent {...props} />
       </section>
     );
   };

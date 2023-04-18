@@ -2,11 +2,7 @@ import { useState } from "react";
 import Question from "./Question/Question";
 import ResultCard from "./ResultCard/ResultCard";
 
-type QuizzContentProps = {
-  totalQuestions: number;
-};
-
-const QuizzContent: React.FC<QuizzContentProps> = ({ totalQuestions }) => {
+const QuizzContent: React.FC = () => {
   const [showQuestions, setShowQuestions] = useState(true);
   const [finalScore, setFinalScore] = useState(0);
 

@@ -1,4 +1,4 @@
-import { useContext, useReducer, useState } from "react";
+import { useContext, useReducer } from "react";
 import PersonalityQuizzContext from "../../../pages/PersonalityQuizz/context";
 import AnswerOption from "./Answer/Answer";
 import NavigationButtons from "./NavigationButtons/NavigationButtons";

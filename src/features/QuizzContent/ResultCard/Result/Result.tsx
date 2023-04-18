@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PersonalityCard from "../../../../components/PersonalityCard/PersonalityCard";
-import { db } from "../../../../db/db";
 import { createQuizzResult } from "../../../../service/service";
 import { Personality } from "../../../../types/types";
 

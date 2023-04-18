@@ -1,4 +1,4 @@
-type ErrorCheckProps = {
+export type ErrorCheckProps = {
   error: boolean;
   resource: string;
 };

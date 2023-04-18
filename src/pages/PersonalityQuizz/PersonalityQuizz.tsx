@@ -13,7 +13,6 @@ const PersonalityQuizz: React.FC = () => {
         {withErrorCheck(QuizzContent)({
           error,
           resource: "questions",
-          totalQuestions: personalityQuestions.questions.length,
         })}
       </PersonalityQuizzContext.Provider>
     </>
