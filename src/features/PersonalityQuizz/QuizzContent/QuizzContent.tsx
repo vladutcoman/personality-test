@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Question from "./Question/Question";
-import Result from "./Result/Result";
+import ResultCard from "./ResultCard/ResultCard";
 
 type QuizzContentProps = {
   totalQuestions: number;
@@ -20,7 +20,7 @@ const QuizzContent: React.FC<QuizzContentProps> = ({ totalQuestions }) => {
       {showQuestions ? (
         <Question submitFinalQuestion={submitFinalQuestion} />
       ) : (
-        <Result score={finalScore} />
+        <ResultCard score={Math.round(finalScore / 5)} />
       )}
     </section>
   );

@@ -12,7 +12,7 @@ const AnswerOption: React.FC<AnswerProps> = ({
   onChange,
 }) => {
   return (
-    <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+    <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600 p-1">
       <div className="flex items-center pl-3">
         <input
           checked={selected}

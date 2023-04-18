@@ -12,7 +12,7 @@ const NavigationButtons: React.FC<NavigationButtonsProps> = ({
   step,
 }) => {
   return (
-    <div className="inline-flex mt-5">
+    <div className="flex gap-2 justify-center mt-5">
       <button
         onClick={onPrevious}
         disabled={step === 0}

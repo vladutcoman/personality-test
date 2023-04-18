@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./App.css";
 import PersonalityQuizz from "./features/PersonalityQuizz/PersonalityQuizz";
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
   return (
     <main className="flex justify-center items-center h-screen">
       {startTest ? (
-        <PersonalityQuizz />
+        <PersonalityQuizz stopTest={onStopTest} />
       ) : (
         <button
           onClick={onStartTest}
