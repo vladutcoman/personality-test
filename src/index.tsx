@@ -3,13 +3,32 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import PersonalityQuizz from "./features/PersonalityQuizz/PersonalityQuizz";
+import QuizzHistoryCard from "./features/QuizzHistoryCard/QuizzHistoryCard";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/quizz",
+    element: <PersonalityQuizz />,
+  },
+  {
+    path: "/results",
+    element: <QuizzHistoryCard />,
+  },
+]);
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

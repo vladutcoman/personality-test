@@ -30,7 +30,15 @@ export type PersonalityTypes = {
   [id in PersonalityTypeIndex]: Personality;
 };
 
+export type QuizzResult = {
+  name: string,
+  personality: Personality,
+};
+
 export type DBData = {
   personalityQuestions: PersonalityQuestions,
   personalityTypes: PersonalityTypes,
+  results: QuizzResult[],
 };
+
+

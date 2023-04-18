@@ -7,4 +7,5 @@ export const db = new Low<DBData>(new Memory());
 db.adapter.write({
   personalityQuestions: personalityQuestionsData,
   personalityTypes: personalityTypesData,
+  results: [],
 });
