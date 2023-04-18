@@ -1,7 +1,7 @@
 import withErrorCheck from "../../hoc/withErrorCheck";
 import withLayout from "../../hoc/withLayout";
 import useQuizzResults from "../../hooks/useQuizzResults";
-import QuizzHistory from "./QuizzHistory/QuizzHistory";
+import QuizzHistory from "../../features/QuizzHistory/QuizzHistory";
 
 const QuizzHistoryCard = () => {
   const { results, error } = useQuizzResults();

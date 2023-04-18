@@ -1,5 +1,5 @@
-import PersonalityCard from "../../../components/PersonalityCard/PersonalityCard";
-import { QuizzResult } from "../../../types/types";
+import PersonalityCard from "../../components/PersonalityCard/PersonalityCard";
+import { QuizzResult } from "../../types/types";
 
 type QuizzHistoryProps = {
   quizzResults: QuizzResult[];

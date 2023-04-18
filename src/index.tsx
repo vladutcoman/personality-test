@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PersonalityQuizz from "./features/PersonalityQuizz/PersonalityQuizz";
-import QuizzHistoryCard from "./features/QuizzHistoryCard/QuizzHistoryCard";
+import PersonalityQuizz from "./pages/PersonalityQuizz/PersonalityQuizz";
+import QuizzHistoryCard from "./pages/QuizzHistoryCard/QuizzHistoryCard";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

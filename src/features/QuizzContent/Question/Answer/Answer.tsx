@@ -1,4 +1,4 @@
-import { Answer } from "../../../../../types/types";
+import { Answer } from "../../../../types/types";
 
 type AnswerProps = {
   answerContent: Answer;

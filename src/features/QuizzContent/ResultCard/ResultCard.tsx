@@ -1,6 +1,6 @@
-import withErrorCheck from "../../../../hoc/withErrorCheck";
-import usePersonalityTypes from "../../../../hooks/usePersonalityTypes";
-import { PersonalityType, PersonalityTypeIndex } from "../../../../types/types";
+import withErrorCheck from "../../../hoc/withErrorCheck";
+import usePersonalityTypes from "../../../hooks/usePersonalityTypes";
+import { PersonalityType, PersonalityTypeIndex } from "../../../types/types";
 import Result from "./Result/Result";
 
 type ResultProps = {

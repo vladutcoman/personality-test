@@ -1,7 +1,7 @@
 import PersonalityQuizzContext from "./context";
 import withErrorCheck from "../../hoc/withErrorCheck";
 import usePersonalityQuestions from "../../hooks/usePersonalityQuestions";
-import QuizzContent from "./QuizzContent/QuizzContent";
+import QuizzContent from "../../features/QuizzContent/QuizzContent";
 import withLayout from "../../hoc/withLayout";
 
 const PersonalityQuizz: React.FC = () => {
