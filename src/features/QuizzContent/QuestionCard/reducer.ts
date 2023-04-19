@@ -11,6 +11,15 @@ type QuestionsAction = {
 
 export type ScoreHistoryKey = 0 | 1 | 2 | 3 | 4;
 
+
+/**
+ * @description 
+ * step: current question index
+ * selectedAnswerIdx: current selected answer index
+ * currentScore: current score
+ * scoreHistory: a map with the format { [key: question-index]: number } that
+ *              stores the score for each question
+ */
 type QuestionState = {
   step: number;
   selectedAnswerIdx: number;

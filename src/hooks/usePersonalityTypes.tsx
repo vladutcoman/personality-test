@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { db } from "../db/db";
+import { db } from "../service/db/db";
+
 import { PersonalityTypes } from "../types/types";
 
 const usePersonalityTypes = () => {

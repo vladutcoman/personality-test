@@ -18,8 +18,14 @@ const Result: React.FC<ResultProps> = ({ personality }) => {
     setName(e.target.value);
   };
 
-  const onSubmit = () => {
-    createQuizzResult(name, personality, navigate);
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const success = await createQuizzResult(name, personality);
+    if (success) {
+      navigate("/");
+    } else {
+      alert("Could not save result");
+    }
   };
 
   return (
@@ -40,6 +46,7 @@ const Result: React.FC<ResultProps> = ({ personality }) => {
           onChange={handleOnChange}
         />
         <button
+          type="submit"
           disabled={btnDisable}
           className={`bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-l ${
             btnDisable ? "opacity-50 cursor-default" : "hover:bg-gray-400"

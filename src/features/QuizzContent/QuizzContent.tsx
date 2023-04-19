@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Question from "./Question/Question";
+import QuestionCard from "./QuestionCard/QuestionCard";
 import ResultCard from "./ResultCard/ResultCard";
 
 const QuizzContent: React.FC = () => {
@@ -14,7 +14,7 @@ const QuizzContent: React.FC = () => {
   return (
     <section>
       {showQuestions ? (
-        <Question submitFinalQuestion={submitFinalQuestion} />
+        <QuestionCard submitFinalQuestion={submitFinalQuestion} />
       ) : (
         <ResultCard score={Math.round(finalScore / 5)} />
       )}

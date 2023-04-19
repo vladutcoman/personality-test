@@ -1,19 +1,18 @@
-import { NavigateFunction } from "react-router-dom";
-import { db } from "../db/db";
 import { Personality } from "../types/types";
+import { db } from "./db/db";
 
-export const createQuizzResult = (name: string, personality: Personality, navigate: NavigateFunction) => {
-  db.write()
+export const createQuizzResult = async (name: string, personality: Personality): Promise<boolean> => {
+  return db.write()
     .then(() => {
       db.data?.results.push({
         name,
         personality,
       });
-      navigate("/");
+      return true;
     })
     .catch((error) => {
-      window.alert("Could not save the data");
       console.error(error);
+      return false;
     });
 }
 

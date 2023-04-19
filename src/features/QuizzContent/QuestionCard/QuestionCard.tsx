@@ -9,16 +9,16 @@ import {
   ScoreHistoryKey,
 } from "./reducer";
 
-type QuestionProps = {
+type QuestionCardProps = {
   submitFinalQuestion: (score: number) => void;
 };
 
-const FIRST_QUESTION = 0;
-const SECOND_QUESTION = 1;
-const THIRD_QUESTION = 2;
-const FOURTH_QUESTION = 3;
+const FIRST_ANSWER = 0;
+const SECOND_ANSWER = 1;
+const THIRD_ANSWER = 2;
+const FOURTH_ANSWER = 3;
 
-const Question: React.FC<QuestionProps> = ({ submitFinalQuestion }) => {
+const QuestionCard: React.FC<QuestionCardProps> = ({ submitFinalQuestion }) => {
   const [state, dispatch] = useReducer(questionReducer, inInitialState);
   const { selectedAnswerIdx, currentScore, scoreHistory, step } = state;
   const { questions } = useContext(PersonalityQuizzContext);
@@ -71,24 +71,24 @@ const Question: React.FC<QuestionProps> = ({ submitFinalQuestion }) => {
         </h3>
         <ul className="text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
           <AnswerOption
-            onChange={() => handleOnChange(FIRST_QUESTION)}
-            answerContent={questions[step].answers[FIRST_QUESTION]}
-            selected={isSelected(FIRST_QUESTION)}
+            onChange={() => handleOnChange(FIRST_ANSWER)}
+            answerContent={questions[step].answers[FIRST_ANSWER]}
+            selected={isSelected(FIRST_ANSWER)}
           />
           <AnswerOption
-            onChange={() => handleOnChange(SECOND_QUESTION)}
-            answerContent={questions[step].answers[SECOND_QUESTION]}
-            selected={isSelected(SECOND_QUESTION)}
+            onChange={() => handleOnChange(SECOND_ANSWER)}
+            answerContent={questions[step].answers[SECOND_ANSWER]}
+            selected={isSelected(SECOND_ANSWER)}
           />
           <AnswerOption
-            onChange={() => handleOnChange(THIRD_QUESTION)}
-            answerContent={questions[step].answers[THIRD_QUESTION]}
-            selected={isSelected(THIRD_QUESTION)}
+            onChange={() => handleOnChange(THIRD_ANSWER)}
+            answerContent={questions[step].answers[THIRD_ANSWER]}
+            selected={isSelected(THIRD_ANSWER)}
           />
           <AnswerOption
-            onChange={() => handleOnChange(FOURTH_QUESTION)}
-            answerContent={questions[step].answers[FOURTH_QUESTION]}
-            selected={isSelected(FOURTH_QUESTION)}
+            onChange={() => handleOnChange(FOURTH_ANSWER)}
+            answerContent={questions[step].answers[FOURTH_ANSWER]}
+            selected={isSelected(FOURTH_ANSWER)}
           />
         </ul>
         <NavigationButtons
@@ -102,4 +102,4 @@ const Question: React.FC<QuestionProps> = ({ submitFinalQuestion }) => {
   }
 };
 
-export default Question;
+export default QuestionCard;

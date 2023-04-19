@@ -1,4 +1,4 @@
-import { PersonalityType, PersonalityQuestions, PersonalityTypes } from "../types/types";
+import { PersonalityType, PersonalityQuestions, PersonalityTypes } from "../../types/types";
 
 const stronglyIntrovert = 'People who are strongly introverted may prefer spending time alone or in small groups, and may find socializing to be draining. They tend to be introspective and thoughtful, and may enjoy deep conversations over small talk. They may also be very independent and self-sufficient, preferring to rely on themselves rather than others. They may need plenty of alone time to recharge their batteries, and may be sensitive to external stimulation such as noise or bright lights';
 const moderatelyIntrovert = 'People who are moderately introverted enjoy spending time alone, but may also enjoy socializing in small groups. They tend to be thoughtful and reflective, and may prefer a few close friends over a large social circle. They may be reserved or quiet in new situations, but may become more outgoing as they get to know people. They may also be creative and introspective, enjoying hobbies such as reading, writing, or art';
