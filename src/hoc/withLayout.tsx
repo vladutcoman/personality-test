@@ -6,7 +6,7 @@ import QuizzLink from "../components/QuizzLink/QuizzLink";
  * @returns the WrappedComponent with flexbox styling
  */
 export function withLayout<P>(WrappedComponent: React.ComponentType<P>) {
-  const Laypout: React.FC<P & {}> = (props) => {
+  const Layout: React.FC<P & {}> = (props) => {
     return (
       <section className="flex flex-col gap-4 justify-center items-center h-screen">
         <QuizzLink route="/" text="Back to Start" />
@@ -15,7 +15,7 @@ export function withLayout<P>(WrappedComponent: React.ComponentType<P>) {
     );
   };
 
-  return Laypout;
+  return Layout;
 }
 
 export default withLayout;
